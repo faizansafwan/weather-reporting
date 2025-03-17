@@ -25,6 +25,9 @@ MONGO_URI=replace_your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 WEATHER_API_KEY=your_openweathermap_api_key
 
+EMAIL_USER=your_email
+EMAIL_PASS=your_password
+
 ## API Endpoints
 
 ### User Registration
