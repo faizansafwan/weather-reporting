@@ -25,9 +25,6 @@ MONGO_URI=replace_your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 WEATHER_API_KEY=your_openweathermap_api_key
 
-## Start the Server
-nodemon server.js
-
 ## API Endpoints
 
 ### User Registration
@@ -68,6 +65,5 @@ PUT http://localhost:5000/api/users/location/:userid
 ### Get Weather Report
 GET http://localhost:5000/api/weather/get-weather?date=YYYY-MM-DD
 
-
-### Run Server
+## Run Server
 nodemon server.js 
