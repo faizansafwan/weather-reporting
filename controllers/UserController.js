@@ -10,6 +10,15 @@ const generateToken = (user) => {
 const createUser = async (req, res) => {
     try {
       const { name, country, city, email, password } = req.body;
+
+      // Password validation
+      const passwordIncludes = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+      if (!passwordIncludes.test(password)) {
+          return res.status(400).json({
+              message: "Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number, and one special character."
+          });
+      }
   
       // Check if user already exists
       const existingUser = await UserSchema.findOne({ email });
