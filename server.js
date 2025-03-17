@@ -5,6 +5,8 @@ const mongoose = require('mongoose');
 const UserRoute = require('./routes/UserRoute.js');
 const WeatherRoute = require('./routes/WeatherRoute.js');
 
+require('./utils/Scheduler.js');
+
 const app = express();
 
 app.use(cors());
